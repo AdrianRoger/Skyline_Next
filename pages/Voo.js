@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { format } from 'date-fns';
 
 export default function Voo(){
 
@@ -44,7 +45,7 @@ export default function Voo(){
                       <td>{v.compAerea}</td>
                       <td>{v.assentos}</td>
                       <td>R$ {v.precoUnit}</td>
-                      <td>{v.dataPartida}</td>
+                      <td>{format(new Date(v.dataPartida), 'dd/MM/yyyy')}</td>
                       <td>{v.origem.nomeCidade}-{v.origem.estado}</td>
                       <td>{v.destino.nomeCidade}-{v.destino.estado}</td>
                     </tr>

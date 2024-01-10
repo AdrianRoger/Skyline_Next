@@ -1,6 +1,6 @@
-
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { format } from 'date-fns';
 
 export default function Reserva(){
 
@@ -41,7 +41,7 @@ export default function Reserva(){
                 <tbody>
                   {reservas.map((r) => (
                     <tr key={r.id}>
-                      <td>{r.dataReserva}</td>	
+                      <td>{format(new Date(r.dataReserva), 'dd/MM/yyyy')}</td>	
                       <td>{r.numPessoas}</td>
                       <td>{r.usuario.nome}-{r.usuario.cpf}</td>
                       <td>R$ {r.voo.precoUnit * r.numPessoas}</td>
