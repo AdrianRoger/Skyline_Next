@@ -1,6 +1,5 @@
 import {useRouter} from "next/router";
 
-
 export default function KeyFrame() {
 
   const router = useRouter();
@@ -10,7 +9,7 @@ export default function KeyFrame() {
   return (
       <section id="fundos" className="d-flex justify-content-center align-items-center text-center">
         <div className="fundo-azul-opaco revelar">
-          <h1 className="titulo-3 text-capitalize">{titulo === "" ? 'Home' : titulo}</h1>
+          <h1 className="titulo-3 text-capitalize">{titulo === "" ? 'Usuarios' : titulo}</h1>
           {titulo !== "" && <p>Lista de {titulo} </p>}
         </div>
       </section>

@@ -1,8 +1,8 @@
 import '@/styles/style.css'
 import '@/styles/globals.css'
 import Navbar from '@/components/Navbar';
+import KeyFrame from '@/components/KeyFrame';
 import Footer from "@/components/Footer";
-import KeyFrame from "@/components/KeyFrame";
 import Head from "next/head";
 
 export default function App({ Component, pageProps }) {
@@ -27,9 +27,7 @@ export default function App({ Component, pageProps }) {
       <Navbar />
       <main>
       <KeyFrame />
-      <section>
-        <Component {...pageProps} />
-      </section>
+      <Component {...pageProps} />
       </main>
 
       <Footer />
