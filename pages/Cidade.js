@@ -10,7 +10,6 @@ export default function Cidade(){
       try {
         let response = await axios.get('https://localhost:7244/api/Cidade');
         setCidades(response.data);
-        console.log(response);
       } catch (error) {
         console.error('Erro ao buscar na base de dados', error);
       }

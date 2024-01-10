@@ -10,7 +10,6 @@ export default function Voo(){
       try {
         let response = await axios.get('https://localhost:7244/api/Voo');
         setVoos(response.data);
-        console.log(response);
       } catch (error) {
         console.error('Erro ao buscar na base de dados', error);
       }

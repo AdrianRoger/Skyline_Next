@@ -11,7 +11,6 @@ export default function Reserva(){
       try {
         let response = await axios.get('https://localhost:7244/api/Reserva');
         setReservas(response.data);
-        console.log(response);
       } catch (error) {
         console.error('Erro ao buscar na base de dados', error);
       }

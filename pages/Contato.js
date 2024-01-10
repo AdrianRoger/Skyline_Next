@@ -10,7 +10,6 @@ export default function Contato(){
       try {
         let response = await axios.get('https://localhost:7244/api/Contato');
         setContatos(response.data);
-        console.log(response);
       } catch (error) {
         console.error('Erro ao buscar na base de dados', error);
       }

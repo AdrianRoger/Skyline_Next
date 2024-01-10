@@ -10,7 +10,6 @@ export default function Usuario(){
       try {
         let response = await axios.get('https://localhost:7244/api/Usuario');
         setUsuarios(response.data);
-        console.log(response);
       } catch (error) {
         console.error('Erro ao buscar na base de dados', error);
       }
