@@ -25,10 +25,10 @@ export default function Navbar() {
                   <div className="collapse navbar-collapse" id="hamburguer">
                     <div className="navbar-nav ms-auto">
                         <Link href="/" className={active === "" ? 'nav-link active': 'nav-link'}>Usuarios</Link>
-                        <Link href="/Cidade" className={active === "cidade" ? 'nav-link active': 'nav-link'}>Cidades</Link>
-                        <Link href="/Voo" className={active === "voo" ? 'nav-link active': 'nav-link'}>Voos</Link>
-                        <Link href="/Reserva" className={active === "reserva" ? 'nav-link active': 'nav-link'}>Reservas</Link>
-                        <Link href="/Contato" className={active === "contato" ? 'nav-link active': 'nav-link'}>Contatos</Link>
+                        <Link href="/Cidade" className={active === "Cidade" ? 'nav-link active': 'nav-link'}>Cidades</Link>
+                        <Link href="/Voo" className={active === "Voo" ? 'nav-link active': 'nav-link'}>Voos</Link>
+                        <Link href="/Reserva" className={active === "Reserva" ? 'nav-link active': 'nav-link'}>Reservas</Link>
+                        <Link href="/Contato" className={active === "Contato" ? 'nav-link active': 'nav-link'}>Contatos</Link>
                     </div>
                   </div>
                 </div>
