@@ -1,6 +1,12 @@
 import Link from 'next/link'
+import {useRouter} from "next/router";
 
 export default function Navbar() {
+
+  const router = useRouter();
+  let active = router.pathname;
+  active = active.slice(1);
+
     return (
         <>
           <header>
@@ -18,23 +24,11 @@ export default function Navbar() {
                 <div className="container-fluid">
                   <div className="collapse navbar-collapse" id="hamburguer">
                     <div className="navbar-nav ms-auto">
-                        {/* <Link href="/" className="nav-link">Home</Link>
-                        <Link href="/destino" className="nav-link">Destino</Link>
-                        <Link href="/promocoes" className="nav-link">Promoções</Link>
-                        <Link href="/contato" className="nav-link">Contato</Link>
-                        <hr className="group-divider"></hr> */}
-                      <div className="dropdown ms-2">
-                        <button className="btn btn-outline-light btn-fundo dropdown-toggle"
-                          type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Admin Pages</button>
-                        <ul className="dropdown-menu">
-                          <li><Link className="dropdown-item" href="/">Clientes</Link></li>
-                          <li><Link className="dropdown-item" href="/Contato">Contato</Link></li>
-                          <li><Link className="dropdown-item" href="/Cidade">Cidades</Link></li>
-                          <li><Link className="dropdown-item" href="/Voo">Vôo</Link></li>
-                          <li><Link className="dropdown-item" href="/Reserva">Reservas</Link></li>
-                        </ul>
-                      </div>
+                        <Link href="/" className={active === "" ? 'nav-link active': 'nav-link'}>Usuarios</Link>
+                        <Link href="/Cidade" className={active === "cidade" ? 'nav-link active': 'nav-link'}>Cidades</Link>
+                        <Link href="/Voo" className={active === "voo" ? 'nav-link active': 'nav-link'}>Voos</Link>
+                        <Link href="/Reserva" className={active === "reserva" ? 'nav-link active': 'nav-link'}>Reservas</Link>
+                        <Link href="/Contato" className={active === "contato" ? 'nav-link active': 'nav-link'}>Contatos</Link>
                     </div>
                   </div>
                 </div>
