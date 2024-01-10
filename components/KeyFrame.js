@@ -9,9 +9,8 @@ export default function KeyFrame() {
   return (
       <section id="fundos" className="d-flex justify-content-center align-items-center text-center">
         <div className="fundo-azul-opaco revelar">
-          <h1 className="titulo-3 text-capitalize">{titulo === "" ? 'Usuários' : titulo}</h1>
-          <p>Lista de {titulo === "" ? 'Usuario' : titulo}s</p>
-          {/* {titulo !== "" && <p>Lista de {titulo} </p>} */}
+          <h1 className="titulo-3 text-capitalize">{titulo === "" ? 'Usuários' : (titulo === "Voo" ? 'Vôos' : titulo+"s")}</h1>
+          <p>Lista de {titulo === "" ? 'Usuário' : (titulo === "Voo" ? 'Vôo' : titulo)}s</p>
         </div>
       </section>
   );
