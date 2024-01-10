@@ -1,19 +1,22 @@
 import Link from 'next/link'
 import {useRouter} from "next/router";
+import Image from 'next/image';
 
 export default function Navbar() {
 
   const router = useRouter();
   let active = router.pathname;
   active = active.slice(1);
-
+    
     return (
         <>
           <header>
             <nav className="navbar navbar-expand-md bg-fundo navbar-dark pe-2">
               <div className="container-fluid d-flex justify-content-between">
                 <Link href="/"	className="navbar-brand d-flex align-items-center logo"> 
-                  <img className="logotipo-2" src="assets/img/logo_white.png" alt="Logotipo"></img>
+                  <Image className="logotipo-2" src="/assets/img/logo_white.png" 
+                  alt="Logotipo" width={58} height={50} />
+                  {/* <img src="/assets/img/logo_white.png" className="logotipo-2"></img> */}
                   Skyline
                 </Link>
                 <button className="navbar-toggler mx-sm-3" type="button"
