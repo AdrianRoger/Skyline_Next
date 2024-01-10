@@ -4,8 +4,14 @@ import Navbar from '@/components/Navbar';
 import KeyFrame from '@/components/KeyFrame';
 import Footer from "@/components/Footer";
 import Head from "next/head";
+import {useRouter} from "next/router";
 
 export default function App({ Component, pageProps }) {
+
+  const router = useRouter();
+  let title = router.pathname;
+  title = title.slice(1);
+
   return (
     <>
       <Head>
@@ -22,14 +28,13 @@ export default function App({ Component, pageProps }) {
 
         <link rel="stylesheet" href="@/assets/css/style.css"></link>
 
-        <title>Skyline - Cidades</title>
+        <title>Skyline - {title === "" ? "Usuários" : title + "s"}</title>
       </Head>
       <Navbar />
       <main>
       <KeyFrame />
       <Component {...pageProps} />
       </main>
-
       <Footer />
     </>
     )
