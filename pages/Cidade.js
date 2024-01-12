@@ -8,7 +8,7 @@ export default function Cidade(){
   useEffect(() => {
     const fetchData = async () => {
       try {
-        let response = await axios.get('https://localhost:7244/api/Cidade');
+        let response = await axios.get('http://skylineapi.somee.com/api/Cidade');
         setCidades(response.data);
       } catch (error) {
         console.error('Erro ao buscar na base de dados', error);

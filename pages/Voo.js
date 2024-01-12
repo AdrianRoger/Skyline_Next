@@ -9,7 +9,7 @@ export default function Voo(){
   useEffect(() => {
     const fetchData = async () => {
       try {
-        let response = await axios.get('https://localhost:7244/api/Voo');
+        let response = await axios.get('http://skylineapi.somee.com/api/Voo');
         setVoos(response.data);
       } catch (error) {
         console.error('Erro ao buscar na base de dados', error);
