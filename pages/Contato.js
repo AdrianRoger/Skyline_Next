@@ -8,7 +8,7 @@ export default function Contato(){
   useEffect(() => {
     const fetchData = async () => {
       try {
-        let response = await axios.get('http://skylineapi.somee.com/api/Contato');
+        let response = await axios.get('https://skylineapi.somee.com/api/Contato');
         setContatos(response.data);
       } catch (error) {
         console.error('Erro ao buscar na base de dados', error);
